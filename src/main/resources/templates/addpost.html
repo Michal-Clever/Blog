@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Rejestracja</title>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/logout">Wyloguj</a></li>
+            <li><a href="/addpost">Napisz</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+
+    <div style="text-align: center;">
+        <h1 th:text="${info}"></h1>
+            <form method="post" action="/addpost" th:object="${postForm}">
+                 <input type="text" th:field="*{title}" placeholder="Tytuł posta">
+                <br/>
+                <br/>
+
+                <div class="form-group">
+                    <textarea th:field="*{context}" class="form-control"  id="exampleFormControlTextarea1" rows="4" cols="30" placeholder="Napisz coś" ></textarea>
+                </div>
+                 <input type="submit" value="Dodaj post">
+            </form>
+    </div>
+</body>
+</html>
