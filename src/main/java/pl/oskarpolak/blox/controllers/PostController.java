@@ -50,6 +50,7 @@ public class PostController {
 
     @GetMapping("/post/{id}")
     public String showPost(@PathVariable("id") int id, Model model){
+
         model.addAttribute("user", userService);
         Optional<PostEntity> postEntity = postService.getPostById(id);
         if(postEntity.isPresent()){
