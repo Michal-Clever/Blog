@@ -27,7 +27,7 @@ public class PostEntity {
         @OneToMany(mappedBy = "post")
         private List<CommentEntity> comments;
 
-//usuwanie postow
+        //usuwanie postow
         //dodanie awatara
         //zamiana nicku
         //admin blokuje
