@@ -9,8 +9,6 @@ import java.util.List;
 @Repository
 public interface PostRepository extends CrudRepository<PostEntity, Integer> {
 
-
-
     List<PostEntity> findAllByOrderByIdDesc();
 
 }
