@@ -17,7 +17,6 @@ public class PostApiController {
     @Autowired
     PostService postService;
 
-
     @GetMapping(value = "/post", produces ="application/json")
     public ResponseEntity getAllPosts(){
         return ResponseEntity.ok(postService.getAllPosts());
