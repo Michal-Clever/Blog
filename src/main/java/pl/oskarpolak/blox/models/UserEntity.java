@@ -1,7 +1,6 @@
 package pl.oskarpolak.blox.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-//import javafx.geometry.Pos;
 import lombok.Data;
 
 import javax.persistence.*;
