@@ -20,6 +20,7 @@ public class UserEntity {
     @Column(name = "has_admin")
     private boolean hasAdmin;
 
+
     @OneToMany(mappedBy = "user")
     @JsonIgnore
     List<PostEntity> posts;
