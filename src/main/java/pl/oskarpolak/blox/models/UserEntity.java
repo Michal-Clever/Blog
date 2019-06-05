@@ -12,6 +12,7 @@ import java.util.List;
 @Data
 public class UserEntity {
 
+
     @Id
     @GeneratedValue
     private int id;
